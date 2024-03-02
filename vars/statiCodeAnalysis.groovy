@@ -1,7 +1,7 @@
 def call(credentialsId){
 
     withSonarQubeEnv(credentialsId: credentialsId) {
-        mvn clean install -DskipTests=true
-        mvn sonar:sonar
+        sh 'mvn clean install -DskipTests=true'
+        sh 'mvn sonar:sonar'
     }
 }
